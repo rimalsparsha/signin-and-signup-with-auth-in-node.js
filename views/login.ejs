@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+        Pet Shop
+    </title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/sign_in_up.css" />
+
+
+    <!-- Javascript -->
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Javascript sequential code -->
+    <script defer src="sign_up_in.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+        <!-- Sign In  -->
+
+      <div class="forms-container">
+        <div class="signin-signup">
+
+          <form method="post" action="/login" class="sign-in-form">
+
+            <h2 class="title">Sign In</h2>
+
+
+            <!-- email field -->
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input name="email" type="email" placeholder="Enter your email" />
+            </div>
+
+
+            <!-- Password field -->
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input name="password" type="password" placeholder="Password" />
+            </div>
+
+            <p>
+              <a style="text-decoration: none;" href="\forgot">Forgot password?</a>
+            </p>
+
+            <!-- submit buttom -->
+            <input type="submit" value="Login" class="btn solid" />
+
+
+            <p class="social-text">Or login with</p>
+            <div class="social-media">
+
+                <!-- facebook -->
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <!-- Google -->
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+
+            </div>
+        </form>
+
+
+    </div>
+  </div>
+
+
+  <!-- Side Content -->
+  <div class="panels-container">
+    <div class="panel left-panel">
+
+       <!-- Home page link -->
+        <div>
+        <a href="/"><i style="color: red; margin-left: -315px;" class="fas fa-home"> HOME </i></a>
+        </div>
+
+      <div class="content">
+
+        <%
+        if(typeof message !== 'undefined'){
+        %>
+        
+       <p style="color: rgb(216, 11, 45); font-size: large;"><%= message %></p> 
+    
+        <%
+        }
+        %>
+
+        <h3>New here ?</h3>
+        <p>
+            "  Life is better with a Cute dog or a Cute cat  "<br><br>
+            Dogs and Cats are helpful, not painful.
+        </p>
+
+            <div style="border: solid; border-radius: 50px;">
+            <a style="color: #fff; text-decoration: none;" href="/register">
+                Sign Up
+            </a>
+            </div>
+
+      </div>
+      <img src="image/dogCat.png" class="image" alt="" />
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

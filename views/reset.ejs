@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up | By Code Info</title>
+    <link rel="stylesheet" href="../css/forgot.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <%
+    if(typeof message !== 'undefined'){
+    %>
+    
+   <p style="color: white;"><%= message %></p> 
+
+    <%
+    }
+    %>
+
+    <div class="signup-box">
+      <h1>Change password</h1>
+      <form action="/reset" method="post">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter Password" /><br><br>
+        <label>Confirm Password</label>
+        <input type="password" name="confirmPassword" placeholder="Confirm Password" />  <br> <br>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

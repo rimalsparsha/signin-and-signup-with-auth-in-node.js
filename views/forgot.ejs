@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login | By Code Info</title>
+    <link rel="stylesheet" href="../css/forgot.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <%
+    if(typeof message !== 'undefined'){
+    %>
+    
+   <p style="color: white;"><%= message %></p> 
+
+    <%
+    }
+    %>
+    
+    <div class="login-box">
+      <h1>Forgot Password</h1>
+      <form action="/forgot" method="post">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="abc@gmail.com" />
+        <br><br>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
